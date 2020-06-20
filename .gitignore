@@ -29,5 +29,5 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-
+# 最後の行に追記
 public/uploads/*
