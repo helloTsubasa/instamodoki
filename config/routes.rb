@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # ビューを確認する為、仮のルーティングを作成
-  root "tweets#index"
+  root "tweets#index" # ビューを確認する為、仮のルーティングを作成
   resources :tweets, only: :index
 end

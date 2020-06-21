@@ -1,0 +1,20 @@
+%header.header
+  .header__box
+    .title
+      = link_to image_tag('title-logo.png', width: '120', alt: "Instagram"), "/", class: "title-img"
+      -# - if user_signed_in?
+
+    .search
+      %p 🔎検索
+
+    .menu
+      %ul.menu__icons
+        %li.home-icon
+          = link_to "/#" do
+            %i.fas.fa-globe-americas.fa-lg.btn-icon
+        %li.chat-icon
+          = link_to "/#" do
+            %i.fas.fa-paper-plane.fa-lg.btn-icon
+        %li.profile-icon
+          = link_to "/#" do
+            %i.fas.fa-user-astronaut.fa-lg.btn-icon

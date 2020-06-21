@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+.header{
+  height: 60px;
+  width: 100vw;
+  border-bottom: 1px solid lightgray;
+  &__box{
+    height: 100%;
+    width: 60%;
+    margin-left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.title{
+  width: 30%;
+}
+
+.search{
+  width: 40%;
+  text-align: center;
+  border: 1px solid lightgray;
+  background-color: rgb(250, 250, 250);
+}
+
+.menu{
+  width: 30%;
+  &__icons{
+    display: flex;
+    justify-content: flex-end;
+    .home-icon{
+      margin-right: 20px;
+    }
+    .chat-icon{
+      margin-right: 20px;
+    }
+  }
+}
+
+.btn-icon{
+  text-decoration: none;
+  color: gray;
+}
