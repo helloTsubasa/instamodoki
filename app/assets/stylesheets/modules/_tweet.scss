@@ -1,0 +1,23 @@
+.contents{
+  height: 100vh;
+  background-color: #f5f5f3;
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  width: 600px;
+  background-color: white;
+  margin-top: 40px;
+  border: 1px solid lightgray;
+  &__menu{
+    height: 50px;
+    border-bottom: 1px solid lightgray;
+  }
+  &__image{
+    height: 600px;
+    border-bottom: 1px solid lightgray;
+  }
+  &__title{
+  }
+}
