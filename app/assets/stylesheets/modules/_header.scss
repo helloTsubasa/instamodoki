@@ -25,14 +25,25 @@
 }
 
 .menu{
+  height: 100%;
+  display: flex;
+  align-items: center;
   &__icons{
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    height: 100%;
     .home-icon{
-      margin-right: 20px;
+      margin: 0 10px;
+      line-height: 60px;
     }
     .chat-icon{
-      margin-right: 20px;
+      margin: 0 10px;
+      line-height: 60px;
+    }
+    .profile-icon{
+      margin: 0 10px;
+      line-height: 60px;
     }
   }
 }
@@ -40,4 +51,34 @@
 .btn-icon{
   text-decoration: none;
   color: gray;
+}
+
+.user-info{
+    display: none;
+}
+
+.profile-icon:hover{
+  cursor: pointer;
+  .user-info{
+    display: block;
+    &__list{
+      position: absolute;
+      width: 100%;
+      right: 0;
+      bottom: 100;
+      a{
+        display: block;
+        line-height: 35px;
+        background-color: white;
+        border-bottom: 1px solid lightgray;
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        text-decoration: none;
+        color: gray;
+        &:hover{
+          color: #0095f6;
+        }
+      }
+    }
+  }
 }

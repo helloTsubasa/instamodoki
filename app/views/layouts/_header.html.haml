@@ -14,10 +14,14 @@
             %i.fas.fa-globe-americas.fa-lg.btn-icon
         %li.chat-icon
           = link_to "/#" do
-            %i.fas.fa-paper-plane.fa-lg.btn-icon
+            %i.fab.fa-rocketchat.fa-lg.btn-icon
         %li.profile-icon
-          = link_to "/#" do
-            %i.fas.fa-user-astronaut.fa-lg.btn-icon
+          %i.fas.fa-user-astronaut.fa-lg.btn-icon
+          %ul.user-info
+            %li.user-info__list
+              = link_to "▶︎マイページ", "/"
+              = link_to "▶︎サインアウト", destroy_user_session_path, method: :delete
+
 
 
 

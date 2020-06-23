@@ -4,7 +4,6 @@
       = image_tag('title-logo.png', width: '200', alt: "Instagram")
     .AccountPage__box__form
       = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
-      -# = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .FormField
           -# .FormField__label--normal
           -#   = f.label :email

@@ -1,9 +1,20 @@
+-# - @tweets.each do |tweet|
 .contents
   .content
     .content__menu
-      名前
+      = tweet.name
     .content__image
       画像
     .content__title
-      ついーと
+      = tweet.text
 
+-# <div class="contents row">
+-#   <% @tweets.each do |tweet| %>
+-#     <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+-#       <p><%= tweet.text %></p>
+-#       <span class="name">
+-#         <%= tweet.name %>
+-#       </span>
+-#     </div>
+-#   <% end %>
+-# </div>
