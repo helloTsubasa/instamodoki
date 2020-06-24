@@ -42,7 +42,7 @@
       line-height: 60px;
     }
     .profile-icon{
-      margin: 0 10px;
+      padding: 0 10px;
       line-height: 60px;
     }
   }
@@ -57,8 +57,23 @@
     display: none;
 }
 
+.home-icon:hover{
+  .fa-globe-americas{
+    color: #0095f6;
+  }
+}
+
+.chat-icon:hover{
+  .fa-rocketchat{
+    color: #0095f6;
+  }
+}
+
 .profile-icon:hover{
   cursor: pointer;
+  .fa-user-astronaut{
+    color: #0095f6;
+  }
   .user-info{
     display: block;
     &__list{

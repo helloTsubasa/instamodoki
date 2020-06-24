@@ -6,7 +6,6 @@
       = image_tag('title-logo.png', width: '200', alt: "Instagram")
       
     .AccountPage__box__form
-      -# = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
         = devise_error_messages!
         .FormField
@@ -29,7 +28,7 @@
           -# .FormField__label--normal
           -#   = f.label :password_confirmation
           .FormField__input--normal
-            = f.password_field :password_confirmation, autocomplete: "off", placeholder: " パスワード再入力"
+            = f.password_field :password_confirmation, autocomplete: "off", placeholder: " パスワードの確認"
         .actions
           = f.submit "登録する", class: 'send-button'
 

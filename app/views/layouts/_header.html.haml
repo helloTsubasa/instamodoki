@@ -19,7 +19,7 @@
           %i.fas.fa-user-astronaut.fa-lg.btn-icon
           %ul.user-info
             %li.user-info__list
-              = link_to "▶︎マイページ", "/"
+              = link_to "▶︎マイページ", user_path(current_user)
               = link_to "▶︎サインアウト", destroy_user_session_path, method: :delete
 
 
