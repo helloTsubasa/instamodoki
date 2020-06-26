@@ -8,8 +8,6 @@
       🔎検索
 
     .menu
-      .post-icon
-        %button{onclick: "location.href='/tweets/new'", type: "button", class: "post-button"} 投稿
       %ul.menu__icons
         %li.home-icon
           = link_to "/#" do
@@ -25,5 +23,9 @@
               = link_to "▶︎サインアウト", destroy_user_session_path, method: :delete
 
 
-
-
+= form_with model: @tweet do |f|
+  = f.label :text
+  = f.text_field :text
+  = f.fields_for :photos do |i|
+    = i.file_field :image
+  = f.submit "投稿", class: "btn btn-primary"

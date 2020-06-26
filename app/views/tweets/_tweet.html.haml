@@ -1,12 +1,15 @@
--# - @tweets.each do |tweet|
 .contents
   .content
-    .content__menu
-      = tweet.name
+    .content__header
+      = link_to "/", class: "post-profile" do
+        = image_tag avatar_url(tweet.user), class: "post-profile-icon"
+      = link_to "/", class: "post-user" do
+        = tweet.user.name
+
     .content__image
-      画像
+      = image_tag tweet.photos.first.image.url(:medium), class: "post-img"
     .content__title
-      = tweet.text
+      あ
 
 -# <div class="contents row">
 -#   <% @tweets.each do |tweet| %>
