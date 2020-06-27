@@ -22,10 +22,18 @@
               = link_to "▶︎マイページ", user_path(current_user)
               = link_to "▶︎サインアウト", destroy_user_session_path, method: :delete
 
-
-= form_with model: @tweet do |f|
-  = f.label :text
-  = f.text_field :text
-  = f.fields_for :photos do |i|
-    = i.file_field :image
-  = f.submit "投稿", class: "btn btn-primary"
+.post
+  .post-box
+    .post-box__header
+      投稿画面
+    .post-box__main
+      = form_with model: @tweet, class: "post-form" do |f|
+        .post-caption
+          .post-caption__user
+            = image_tag avatar_url(current_user), class: "post-profile-icon"
+          .post-caption__text
+            = f.text_field :text, placeholder: "キャプションを書く", class: "text-field"
+        .post-image
+          = f.fields_for :photos, class: "image-field" do |i|
+            = i.file_field :image
+        = f.submit "投稿", class: "post-submit"
