@@ -1,0 +1,20 @@
+.detail
+  = render "layouts/header"
+  .detail__box
+    .detail-box
+      .detail-box__left
+        .image-box
+          = image_tag @tweet.photos.first.image.url(:medium), class: "detail-img"
+      .detail-box__right
+        .detail-name
+          = link_to user_path(@tweet.user), class: "post-profile" do
+            = image_tag avatar_url(@tweet.user), class: "post-profile-icon"
+          = link_to user_path(@tweet.user), class: "post-user" do
+            = @tweet.user.name
+        .detail-text
+          %span.detail-text__main
+            = @tweet.text
+          .detail-time
+            = time_ago_in_words(@tweet.created_at).upcase+ "前"
+
+

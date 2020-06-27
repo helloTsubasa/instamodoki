@@ -25,6 +25,16 @@
     border-bottom: 1px solid lightgray;
     display: flex;
     text-align: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    position: relative;
+    &__name{
+      display: flex;
+      text-align: center;
+    }
+    &__menu{
+      text-align: right;
+    }
   }
   &__image{
     height: 600px;
@@ -106,11 +116,15 @@
 }
 
 .post-profile-icon {
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.post-profile{
+  text-decoration: none;
 }
 
 .post-user{
@@ -119,4 +133,39 @@
   font-weight: bold;
   font-size: 14px;
   padding-top: 2px;
+}
+
+
+.tweet-menu{
+  display: none;
+}
+
+.menu-text{
+  padding: 0 16px;
+}
+
+.menu-text:hover{
+  cursor: pointer;
+  .tweet-menu{
+    display: block;
+    position: absolute;
+    width: 10%;
+    right: 0;
+    &__list{
+      text-align: left;
+    }
+    a{
+      display: block;
+      line-height: 35px;
+      background-color: white;
+      border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      text-decoration: none;
+      color: gray;
+      font-size: 14px;
+      &:hover{
+        color: #0095f6;
+      }
+    }
+  }
 }

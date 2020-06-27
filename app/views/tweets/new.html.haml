@@ -1,39 +1,40 @@
-%header.header
-  .header__box
-    .title
-      = link_to image_tag('title-logo.png', width: '120', alt: "Instagram"), "/", class: "title-img"
-      -# - if user_signed_in?
-
-    .search
-      🔎検索
-
-    .menu
-      %ul.menu__icons
-        %li.home-icon
-          = link_to "/#" do
-            %i.fas.fa-globe-americas.fa-lg.btn-icon
-        %li.chat-icon
-          = link_to "/#" do
-            %i.fab.fa-rocketchat.fa-lg.btn-icon
-        %li.profile-icon
-          %i.fas.fa-user-astronaut.fa-lg.btn-icon
-          %ul.user-info
-            %li.user-info__list
-              = link_to "▶︎マイページ", user_path(current_user)
-              = link_to "▶︎サインアウト", destroy_user_session_path, method: :delete
-
 .post
-  .post-box
-    .post-box__header
-      投稿画面
-    .post-box__main
-      = form_with model: @tweet, class: "post-form" do |f|
-        .post-caption
-          .post-caption__user
-            = image_tag avatar_url(current_user), class: "post-profile-icon"
-          .post-caption__text
-            = f.text_field :text, placeholder: "キャプションを書く", class: "text-field"
-        .post-image
-          = f.fields_for :photos, class: "image-field" do |i|
-            = i.file_field :image
-        = f.submit "投稿", class: "post-submit"
+  %header.header
+    .header__box
+      .title
+        = link_to image_tag('title-logo.png', width: '120', alt: "Instagram"), "/", class: "title-img"
+        -# - if user_signed_in?
+
+      .search
+        🔎検索
+
+      .menu
+        %ul.menu__icons
+          %li.home-icon
+            = link_to "/#" do
+              %i.fas.fa-globe-americas.fa-lg.btn-icon
+          %li.chat-icon
+            = link_to "/#" do
+              %i.fab.fa-rocketchat.fa-lg.btn-icon
+          %li.profile-icon
+            %i.fas.fa-user-astronaut.fa-lg.btn-icon
+            %ul.user-info
+              %li.user-info__list
+                = link_to "▶︎マイページ", user_path(current_user)
+                = link_to "▶︎サインアウト", destroy_user_session_path, method: :delete
+
+  .post__box
+    .post-box
+      .post-box__header
+        投稿画面
+      .post-box__main
+        = form_with model: @tweet, class: "post-form" do |f|
+          .post-caption
+            .post-caption__user
+              = image_tag avatar_url(current_user), class: "post-profile-icon"
+            .post-caption__text
+              = f.text_field :text, placeholder: "キャプションを書く", class: "text-field"
+          .post-image
+            = f.fields_for :photos, class: "image-field" do |i|
+              = i.file_field :image
+          = f.submit "投稿", class: "post-submit"

@@ -23,6 +23,20 @@ class TweetsController < ApplicationController
     end
   end
 
+  def show
+    @tweet = Tweet.find_by(id: params[:id])
+  end
+
+  def destroy
+    @tweet = Tweet.find_by(id: params[:id])
+    if @tweet.user == current_user
+      flash[:notice] = "投稿が削除されました" if @tweet.destroy
+    else
+      flash[:alert] = "投稿の削除に失敗しました"
+    end
+    redirect_to root_path
+  end
+
   private
     def tweet_params
       params.require(:tweet).permit(:text, photos_attributes: [:image]).merge(user_id: current_user.id)
