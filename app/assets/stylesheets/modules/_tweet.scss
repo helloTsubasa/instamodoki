@@ -34,7 +34,67 @@
     text-align: center;
   }
   &__title{
-    background-color: white;
+    &__icons{
+      height: 36px;
+      display: flex;
+      line-height: 36px;
+      padding-left:16px;
+      margin-top: 5px;
+      .good-icon{
+        width: 36px;
+        .good-btn{
+        }
+      }
+      .bad-icon{
+        margin-left: 8px;
+        width: 36px;
+        .bad-btn{
+        }
+      }
+      .comment-icon{
+        margin-left: 8px;
+        width: 36px;
+        .comment-btn{
+        }
+      }
+    }
+    &__times{
+      margin-bottom: 8px;
+      &__good{
+        padding-left:14px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      &__bad{
+        padding-left:16px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    &__main{
+      padding: 0 14px;
+      font-size: 14px;
+      .tweet-user{
+        font-weight: bold;
+      }
+      .tweet-text{
+      }
+      .tweet-time{
+        &__link{
+          text-decoration: none;
+          font-size: 10px;
+          color: #8e8e8e;
+        }
+      }
+      .tweet-comment{
+        border-top: 1px solid lightgray;
+        .comment-field{
+          width: 100%;
+          border: none;
+          background: none;
+        }
+      }
+    }
   }
 }
 
