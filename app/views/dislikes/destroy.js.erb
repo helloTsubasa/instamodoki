@@ -1,0 +1,4 @@
+$('#dislike-icon-tweet-<%= @tweet.id.to_s %>').
+  html('<%= j render "tweets/dislike", { tweet: @tweet } %>');
+$('#dislike-text-tweet-<%= @tweet.id.to_s %>').
+  html('<%= j render "tweets/dislike_text", { dislikes: @tweet.dislikes } %>');

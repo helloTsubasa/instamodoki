@@ -28,14 +28,20 @@
           - else
             = link_to tweet_likes_path(tweet), method: :POST, remote: true, class: "like" do
               %i.far.fa-thumbs-up.fa-lg.btn-icon
-        %li.bad-icon
-          = link_to "/", class: "bad" do
-            %i.far.fa-thumbs-down.fa-lg.btn-icon
+        %li.bad-icon{id: "dislike-icon-tweet-#{tweet.id.to_s}"}
+          - if tweet.disliked_by(current_user).present?
+            = link_to tweet_dislike_path(tweet.id, tweet.disliked_by(current_user)), method: :DELETE, remote: true, class: "disliked" do
+              %i.far.fa-thumbs-down.fa-lg.bad-btn
+          - else
+            = link_to tweet_dislikes_path(tweet), method: :POST, remote: true, class: "dislike" do
+              %i.far.fa-thumbs-down.fa-lg.btn-icon
         %li.comment-icon
           = link_to "/", class: "comment" do
             %i.far.fa-comment.fa-lg.comment-btn.btn-icon
       .content__title__times{id: "like-text-tweet-#{tweet.id.to_s}"}
         = render "like_text", { likes: tweet.likes }
+      .content__title__times{id: "dislike-text-tweet-#{tweet.id.to_s}"}
+        = render "dislike_text", { dislikes: tweet.dislikes }
       .content__title__main
         %span.tweet-user
           = tweet.user.name

@@ -1,0 +1,17 @@
+<strong class="liked-user">
+  <% dislikes.each.with_index do |dislike, index| %>
+    <% if dislikes.size == 1 %>
+      <%= dislike.user.name %> </strong> が「わるいね！」しました
+    <% elsif dislike == dislikes.last %>
+      </strong>and<strong class="liked-user">
+      <%= + dislike.user.name %></strong> が「わるいね！」しました
+    <% elsif index > 1 %>
+      </strong><%= "and " + (dislikes.size-index).to_s + " 他 " %> が「わるいね！」しました
+      <% break %>
+    <% elsif index == dislikes.size-2 || index == 1 %>
+      <%= dislike.user.name %>
+    <% else %>
+      <%= dislike.user.name + ", " %>
+    <% end %>
+  <% end %>
+</strong>

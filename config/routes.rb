@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :tweets, only: [:index, :new, :create, :show, :destroy] do
     resources :photos, only: :create
     resources :likes, only: [:create, :destroy]
+    resources :dislikes, only: [:create, :destroy]
   end
 
 end
