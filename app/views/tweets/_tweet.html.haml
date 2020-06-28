@@ -18,22 +18,24 @@
 
     .content__image
       = image_tag tweet.photos.first.image.url(:medium), class: "post-img"
+      
     .content__title
       %ul.content__title__icons
-        %li.good-icon
-          = link_to "/", class: "good" do
-            %i.far.fa-thumbs-up.fa-lg.good-btn.btn-icon
+        %li.good-icon{id: "like-icon-tweet-#{tweet.id.to_s}"}
+          - if tweet.liked_by(current_user).present?
+            = link_to tweet_like_path(tweet.id, tweet.liked_by(current_user)), method: :DELETE, remote: true, class: "liked" do
+              %i.far.fa-thumbs-up.fa-lg.good-btn
+          - else
+            = link_to tweet_likes_path(tweet), method: :POST, remote: true, class: "like" do
+              %i.far.fa-thumbs-up.fa-lg.btn-icon
         %li.bad-icon
           = link_to "/", class: "bad" do
-            %i.far.fa-thumbs-down.fa-lg.bad-btn.btn-icon
+            %i.far.fa-thumbs-down.fa-lg.btn-icon
         %li.comment-icon
           = link_to "/", class: "comment" do
             %i.far.fa-comment.fa-lg.comment-btn.btn-icon
-      .content__title__times
-        %span.content__title__times__good
-          いいね！ 10件,
-        %span.content__title__times__bad
-          わるいね！ 99件
+      .content__title__times{id: "like-text-tweet-#{tweet.id.to_s}"}
+        = render "like_text", { likes: tweet.likes }
       .content__title__main
         %span.tweet-user
           = tweet.user.name

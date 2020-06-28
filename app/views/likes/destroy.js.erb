@@ -1,0 +1,4 @@
+$('#like-icon-tweet-<%= @tweet.id.to_s %>').
+  html('<%= j render "tweets/like", { tweet: @tweet } %>');
+$('#like-text-tweet-<%= @tweet.id.to_s %>').
+  html('<%= j render "tweets/like_text", { likes: @tweet.likes } %>');
