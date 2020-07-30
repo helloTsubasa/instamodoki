@@ -14,7 +14,6 @@
             %i.fas.fa-cog.fa-lg
             %ul.setting-info
               %li.setting-info__list
-                = link_to "マイページ", user_path(current_user)
                 = link_to "サインアウト", destroy_user_session_path, method: :delete
 
 
