@@ -47,11 +47,15 @@
           = tweet.user.name
         %span.tweet-text
           = tweet.text
-        .tweet-time
+        .comment{id: "comment-tweet-#{tweet.id.to_s}"}
+          -# = render 'comment_list', { tweet: tweet }
           = link_to time_ago_in_words(tweet.created_at).upcase + "前", tweet_path(tweet), class: "tweet-time__link"
-        .tweet-comment
-          = form_with url:"/" do |f|
-            = f.text_field :text, placeholder: "コメント...", class: "comment-field"
+        .tweet-comment{id: "comment-form-tweet-#{tweet.id.to_s}"}
+          = form_with model: [tweet, Comment.new] do |f|
+            = f.hidden_field :user_id, value: current_user.id
+            = f.hidden_field :tweet_id, value: tweet.id
+            = f.text_field :comment, class: "comment-field", placeholder: "コメント ...", autocomplete: :off
+
 
 
 
