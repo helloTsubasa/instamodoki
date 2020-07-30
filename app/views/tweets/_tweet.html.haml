@@ -43,19 +43,20 @@
       .content__title__times{id: "dislike-text-tweet-#{tweet.id.to_s}"}
         = render "dislike_text", { dislikes: tweet.dislikes }
       .content__title__main
-        %span.tweet-user
-          = tweet.user.name
-        %span.tweet-text
-          = tweet.text
+        .content__title__main__user
+          %span.tweet-user
+            = tweet.user.name
+          %span.tweet-text
+            = tweet.text
         .comments{id: "comment-tweet-#{tweet.id.to_s}"}
           = render 'comment_list', { tweet: tweet }
           = link_to time_ago_in_words(tweet.created_at).upcase + "前", tweet_path(tweet), class: "tweet-time__link"
         .tweet-comment{id: "comment-form-tweet-#{tweet.id.to_s}"}
-          = form_with model: [tweet, Comment.new] do |f|
+          = form_with model: [tweet, Comment.new], class: "tweet-comment__form" do |f|
             = f.hidden_field :user_id, value: current_user.id
             = f.hidden_field :tweet_id, value: tweet.id
             = f.text_field :comment, class: "comment-field", placeholder: "コメント ...", autocomplete: :off
-            = f.submit "投稿する"
+            = f.submit "投稿する", class: "comment-submit"
 
 
 

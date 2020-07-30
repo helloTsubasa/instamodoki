@@ -1,0 +1,12 @@
+.comment-list{
+  display: flex;
+  justify-content: space-between;
+  &__main{
+    font-size: 13px;
+    .comment-user-name{
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
