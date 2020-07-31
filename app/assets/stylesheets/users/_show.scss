@@ -1,13 +1,18 @@
 .profile-wrap{
-  height: 100vh;
-  padding: 30px 20px 0 20px;
   background-color: rgb(250, 250, 250);
+  min-height: 100vh;
+}
+
+.profile-main{
+  padding: 30px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 900px;
   &__row{
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 900px;
     display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
     .profile-pic{
       width: 20vw;
       text-align: center;
@@ -83,4 +88,21 @@
       }
     }
   }
+}
+
+.Photos{
+  &__photo{
+    &__image{
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.grid{
+  display: grid;
+  gap: 26px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 6%;
+  margin-bottom: 50px;
 }

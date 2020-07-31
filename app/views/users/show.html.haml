@@ -1,25 +1,26 @@
 = render "layouts/header"
 
 .profile-wrap
-  .profile-wrap__row
-    .profile-pic
-      = image_tag avatar_url(@user), class: "round-img"
-    .profile-menu
-      .profile-menu__row
-        %h1.profile-name= @user.name
-        - if @user == current_user
-          %button.edit-btn{type: "button"}
-            = link_to "プロフィールを編集", edit_user_registration_path, class: "edit-profile"
-          .setting-icon
-            %i.fas.fa-cog.fa-lg
-            %ul.setting-info
-              %li.setting-info__list
-                = link_to "サインアウト", destroy_user_session_path, method: :delete
-  .profile-wrap__photos
-    - @tweets.each do |tweet|
-      = link_to root_path do
-        .pickup-brand__box__bot__items
-          = image_tag tweet.photos.first.image.url(:medium), class: 'pickup-category__box__bot__items__image'
+  .profile-main
+    .profile-main__row
+      .profile-pic
+        = image_tag avatar_url(@user), class: "round-img"
+      .profile-menu
+        .profile-menu__row
+          %h1.profile-name= @user.name
+          - if @user == current_user
+            %button.edit-btn{type: "button"}
+              = link_to "プロフィールを編集", edit_user_registration_path, class: "edit-profile"
+            .setting-icon
+              %i.fas.fa-cog.fa-lg
+              %ul.setting-info
+                %li.setting-info__list
+                  = link_to "サインアウト", destroy_user_session_path, method: :delete
+    .Photos.grid
+      - @tweets.each do |tweet|
+        = link_to root_path do
+          .Photos__photo
+            = image_tag tweet.photos.first.image.url(:medium), class: 'Photos__photo__image'
 
 
 
