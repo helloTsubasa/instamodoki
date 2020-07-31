@@ -1,11 +1,6 @@
 @import "reset";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "modules/header";
-@import "modules/flash";
-@import "tweets/tweet";
-@import "tweets/new";
-@import "tweets/show";
-@import "users/devise";
-@import "users/show";
-
+@import "modules/*";
+@import "tweets/*";
+@import "users/*";

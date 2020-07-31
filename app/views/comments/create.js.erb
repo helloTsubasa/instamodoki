@@ -1,0 +1,4 @@
+$('#comment-tweet-<%= @tweet.id.to_s %>').
+  html('<%= j render "tweets/comment_list", { tweet: @tweet } %>');
+
+$('#comment-form-tweet-<%= @tweet.id.to_s %> #comment_comment').val("");

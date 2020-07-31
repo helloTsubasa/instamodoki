@@ -14,8 +14,12 @@
             %i.fas.fa-cog.fa-lg
             %ul.setting-info
               %li.setting-info__list
-                = link_to "マイページ", user_path(current_user)
                 = link_to "サインアウト", destroy_user_session_path, method: :delete
+  .profile-wrap__photos
+    - @tweets.each do |tweet|
+      = link_to root_path do
+        .pickup-brand__box__bot__items
+          = image_tag tweet.photos.first.image.url(:medium), class: 'pickup-category__box__bot__items__image'
 
 
 
