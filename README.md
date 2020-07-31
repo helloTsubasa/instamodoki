@@ -1,3 +1,5 @@
+<h1 align="center">Instamodoki</h1>
+
 # DB設計
 ![データベース ER 図](https://user-images.githubusercontent.com/66294265/88665910-4e39ff00-d11a-11ea-96f3-9e842b7dc310.png)
 
