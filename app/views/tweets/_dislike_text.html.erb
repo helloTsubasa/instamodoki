@@ -6,7 +6,7 @@
       </strong>and<strong class="liked-user">
       <%= + dislike.user.name %></strong> が「わるいね！」しました
     <% elsif index > 1 %>
-      </strong><%= "and " + (dislikes.size-index).to_s + " 他 " %> が「わるいね！」しました
+      </strong><%= "他" + (dislikes.size-index).to_s %> 人が「わるいね！」しました
       <% break %>
     <% elsif index == dislikes.size-2 || index == 1 %>
       <%= dislike.user.name %>
