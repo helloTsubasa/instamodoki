@@ -18,7 +18,7 @@
                   = link_to "サインアウト", destroy_user_session_path, method: :delete
     .Photos.grid
       - @tweets.each do |tweet|
-        = link_to root_path do
+        = link_to tweet_path(tweet) do
           .Photos__photo
             = image_tag tweet.photos.first.image.url(:medium), class: 'Photos__photo__image'
 
