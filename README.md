@@ -1,7 +1,7 @@
 <h1 align="center">InstaModoki(Insta風写真投稿アプリ)</h1>
 
 ## アプリケーションの概要
-IPアドレス : https://instamodoki.herokuapp.com/
+IPアドレス : https://instamodoki.herokuapp.com/  
 某写真投稿アプリ~~のパクリ~~からインスパイアを受けました。
 
 
