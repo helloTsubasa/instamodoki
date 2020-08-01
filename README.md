@@ -22,6 +22,9 @@ IPアドレス : https://instamodoki.herokuapp.com/
 <p>
   <a href="https://www.ruby-lang.org/ja/"><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="45px;" /></a>
   <a href="https://railsguides.jp/getting_started.html"><img src="https://kuromame-blog.com/wp-content/uploads/rails-768x432.png" height="45px;" /></a>
+   <a href="https://devdocs.io/html/"><img src="https://user-images.githubusercontent.com/66232530/88711698-87429580-d153-11ea-9ae5-452b13d15a70.png" height="45px;" /></a>
+  <a href="https://devdocs.io/css/"><img src="https://user-images.githubusercontent.com/66232530/88711881-ccff5e00-d153-11ea-998e-f22d427ffa70.jpg" height="45px;" /></a>
+  <a href="https://www.javascript.com/"><img src="https://user-images.githubusercontent.com/66232530/88712057-1780da80-d154-11ea-9129-11a9ff70322e.png" height="45px;" /></a>
   <a href="http://haml.info/"><img src="https://user-images.githubusercontent.com/39142850/71774618-b32edb80-2fb5-11ea-9050-d5929a49e9a5.png" height="45px;" /></a>
   <a href="https://sass-lang.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/144px-Sass_Logo_Color.svg.png" height="40px;" /></a>
   <a href="https://jquery.com/"><img src="https://syncer.jp/storage/web/brand-logos/static/dst/jquery-logo-001.png" height="45px;" /></a>
