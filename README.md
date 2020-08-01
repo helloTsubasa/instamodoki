@@ -2,7 +2,7 @@
 
 ## アプリケーションの概要
 IPアドレス : https://instamodoki.herokuapp.com/  
-~~Instagramのパクリ~~某写真投稿アプリ風アプリです。
+~~Instagramのパクリ~~もとい、Instagram風写真投稿アプリです。
 
 
 <ul>
