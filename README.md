@@ -2,7 +2,7 @@
 
 ## アプリケーションの概要
 ~~Instagramのパクリ~~もとい、Instagram風写真投稿アプリです。  
-初めて個人で０から作成しました。  
+個人では初めての制作物になります。  
 herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/  
 
 ## アプリケーションの機能
