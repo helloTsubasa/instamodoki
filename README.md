@@ -1,9 +1,9 @@
 <h1 align="center">InstaModoki(Insta風写真投稿アプリ)</h1>
 
 ## アプリケーションの概要
-IPアドレス : https://instamodoki.herokuapp.com/  
 ~~Instagramのパクリ~~もとい、Instagram風写真投稿アプリです。  
 画像と文章を合わせて投稿できます。  
+herokuを使ってデプロイ済 https://instamodoki.herokuapp.com/  
 
 ## アプリケーションの機能
 <ul>
