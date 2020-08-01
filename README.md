@@ -15,8 +15,19 @@ IPアドレス : https://instamodoki.herokuapp.com/
   <li>ツイートの詳細表示</li>
   <li>ツイートへのいいね・わるいね(非同期)</li>
   <li>ツイートへのコメント(非同期)</li>
-
 </ul>
+
+## 開発環境
+
+<p>
+  <a href="https://www.ruby-lang.org/ja/"><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="45px;" /></a>
+  <a href="https://railsguides.jp/getting_started.html"><img src="https://kuromame-blog.com/wp-content/uploads/rails-768x432.png" height="45px;" /></a>
+  <a href="https://devdocs.io/html/"><img src="https://user-images.githubusercontent.com/66232530/88711698-87429580-d153-11ea-9ae5-452b13d15a70.png" height="45px;" /></a>
+  <a href="https://sass-lang.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/144px-Sass_Logo_Color.svg.png" height="40px;" /></a>
+  <a href="https://jquery.com/"><img src="https://syncer.jp/storage/web/brand-logos/static/dst/jquery-logo-001.png" height="45px;" /></a>
+  <a href="https://github.co.jp/"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="45px;" /></a>
+</p>
+
 
 # DB設計
 ![データベース ER 図](https://user-images.githubusercontent.com/66294265/88665910-4e39ff00-d11a-11ea-96f3-9e842b7dc310.png)
