@@ -3,7 +3,7 @@
 ## アプリケーションの概要
 <ul>
   <li>IPアドレス : https://instamodoki.herokuapp.com/</li>
-  <li></li>
+  <li>某写真投稿アプリ~~のパクリ~~からインスパイアを受けました。</li>
   <li></li>
 </ul>
 
