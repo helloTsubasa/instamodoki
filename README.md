@@ -2,7 +2,7 @@
 
 ## アプリケーションの概要
 <ul>
-  <li></li>
+  <li>IPアドレス : https://instamodoki.herokuapp.com/</li>
   <li></li>
   <li></li>
 </ul>
