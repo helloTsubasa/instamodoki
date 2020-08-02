@@ -102,3 +102,17 @@ herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/
 ### Association
 - belongs_to :user
 - belongs_to :tweet
+
+
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|comment|text|null: false|
+|tweet_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :tweet
