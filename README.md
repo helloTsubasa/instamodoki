@@ -1,4 +1,4 @@
-<h1 align="center">InstaModoki(Insta風写真投稿アプリ)</h1>
+<h1>InstaModoki(Insta風写真投稿アプリ)</h1>
 
 ## アプリケーションの概要
 ~~Instagramのパクリ~~もとい、Instagram風写真投稿アプリです。  
