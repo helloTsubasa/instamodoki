@@ -42,7 +42,7 @@ herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/
 
 
 # DB設計
-![データベース ER 図](https://user-images.githubusercontent.com/66294265/89129682-1677f080-d53a-11ea-9d67-c28429ccf0b1.png)
+![データベース ER 図](https://user-images.githubusercontent.com/66294265/89129578-61453880-d539-11ea-80c0-b28c22719a27.png)
 
 
 ## usersテーブル
@@ -104,6 +104,20 @@ herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/
 
 |Column|Type|Options|
 |------|----|-------|
+|tweet_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :tweet
+
+
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|comment|text|null: false|
 |tweet_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 
