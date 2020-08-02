@@ -33,6 +33,14 @@ herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/
 </p>
 
 
+## 今後の実装予定
+<ul>
+  <li>フォロー/フォロワー機能</li>
+  <li>ユーザー検索(非同期)</li>
+  <li>画像の複数枚投稿・表示</li>
+</ul>
+
+
 # DB設計
 ![データベース ER 図](https://user-images.githubusercontent.com/66294265/89129682-1677f080-d53a-11ea-9d67-c28429ccf0b1.png)
 
