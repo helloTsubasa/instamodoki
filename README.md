@@ -1,7 +1,7 @@
 <h1>InstaModoki(Insta風写真投稿アプリ)</h1>
 
 ## アプリケーションの概要
-~~Instagramのパクリ~~もとい、Instagram風写真投稿アプリです。  
+Instagram風写真投稿アプリです。  
 個人制作物としては、本アプリが処女作になります。  
 herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/  
 
