@@ -2,39 +2,23 @@
   .Chat-main__group-info
     .Left-box
       .Left-box__current-group
-        test
+        = @group.name
       %ul.Left-box__member-list
         Member :
-        %li.Left-box__member-list__member
-          たろう
-    =link_to "#", class: 'Edit-btn' do
+        - @group.users.each do |user|
+          %li.Left-box__member-list__member
+            = user.name
+    = link_to edit_group_path(@group.id), class: 'Edit-btn' do
       Edit
+  /---------------------------------------------------------------------------------------------
   .Chat-main__message-list
-    .Message-box
-      .Message-box__message-info
-        .Message-box__message-info__name
-          たろう
-        .Message-box__message-info__date
-          2019/11/20(Wed) 17:43:01
-      .Message-box__message
-        %p.Message-box__message__content
-          おはよう
-
-    .Message-box
-      .Message-box__message-info
-        .Message-box__message-info__name
-          じろう
-        .Message-box__message-info__date
-          2019/11/20(Wed) 17:43:02
-      .Message-box__message
-        %p.Message-box__message__content
-          こんにちは
-
+    = render @messages
+  /---------------------------------------------------------------------------------------------
   .Chat-main__message-form
-    %form.New-message
+    =form_with model: [@group, @message], html: {class: "New-message"}, local: true do |f|
       .New-message__input
-        %input.New-message__input__text{"placeholder": "type a message", "type": "text"}
-        %label.New-message__input__image
+        = f.text_field :content, class: 'New-message__input__text', placeholder: 'type a message'
+        = f.label :image, class: 'New-message__input__image' do
           = icon('far', 'image', class: 'Image-icon')
-          %input{type: "file", class: 'Hidden'}
-      %input.New-message__submit-btn{"name": "commit", "type": "submit", "value": "Send"}
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'New-message__submit-btn'

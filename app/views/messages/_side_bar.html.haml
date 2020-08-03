@@ -2,16 +2,19 @@
   .Side-bar__user-name
     .Top-list
       .Top-list__name
-        たろう
+        = current_user.name
       %ul.Top-list__icons
         %li.Top-list__icons__edit-icon
           = link_to new_group_path do
             = icon('fas', 'edit', class: 'btn-icon')
-
+        %li.Top-list__icons__cog-icon
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'btn-icon')
+  
   .Side-bar__group-list
-    - current_user.groups.each do |group|
+    - current_user.groups.each do|group|
       .Group
-        = link_to '#' do
+        = link_to group_messages_path(group), class: 'group-box' do
           .Group__name
             = group.name
           .Group__message
