@@ -8,4 +8,4 @@
     - if message.content.present?
       %p.Message-box__message__content
         = message.content
-    = image_tag message.image.url, class: 'Message-box__message__image' if message.image.present?
+    = image_tag message.image.url(:chat), class: 'Message-box__message__image' if message.image.present?
