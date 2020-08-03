@@ -1,0 +1,25 @@
+.Side-bar
+  .Side-bar__user-name
+    .Top-list
+      .Top-list__name
+        たろう
+      %ul.Top-list__icons
+        %li.Top-list__icons__edit-icon
+        = link_to "#" do
+          = icon('fas', 'edit', class: 'btn-icon')
+        %li.Top-list__icons__cog-icon
+        = link_to "#" do
+          = icon('fas', 'cog', class: 'btn-icon')
+
+  .Side-bar__group-list
+    .Group
+      .Group__name
+        techcamp
+      .Group__message
+        まだメッセージがありません
+
+    .Group
+      .Group__name
+        techcamp
+      .Group__message
+        まだメッセージがありません
