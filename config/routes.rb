@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   root "tweets#index"
 
   resources :users, only: :show
-  resources :groups, only: [:new, :create]
-  resources :messages, only: :index
+  
+  resources :groups, only: [:index, :new, :create, :edit, :update] do
+    resources :messages, only: [:index, :create]
+  end
 
   resources :tweets, only: [:index, :new, :create, :show, :destroy] do
     resources :photos, only: :create
