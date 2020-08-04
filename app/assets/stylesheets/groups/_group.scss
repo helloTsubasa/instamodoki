@@ -62,6 +62,9 @@ li {
     color: #fff;
     background-color: #0095f6;
     border: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    font-weight: bold;
   }
   &__errors {
     margin: 30px 0;
@@ -84,7 +87,7 @@ li {
     cursor: pointer;
   }
   &__add {
-    color: #38aef0;
+    color: #0095f6;
   }
   &__remove {
     color: #f05050;
