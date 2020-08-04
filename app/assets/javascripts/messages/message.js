@@ -39,7 +39,7 @@ $(function(){
       return html;
     };
   }
-  
+
   $('.New-message').on('submit', function(e){
     e.preventDefault()
     let formData = new FormData(this)
@@ -54,7 +54,8 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data)
-      console.log(html)
-    })
-  })
+      $('.Chat-main__message-list').append(html);
+      $('.New-message')[0].reset();
+    });
+  });
 });
