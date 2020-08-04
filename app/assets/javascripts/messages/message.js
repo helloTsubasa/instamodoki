@@ -1,6 +1,15 @@
 $(function(){
   $('.New-message').on('submit', function(e){
     e.preventDefault()
-    console.log("送信後、イベント発火がされている")
+    let formData = new formData(this)
+    let url = $(this).attr('action')
+    $.ajax({
+      url: url,
+      type: "POST",
+      data: formData,
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    })
   })
 });
