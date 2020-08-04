@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users,
     controllers: { registrations: 'registrations' }
-  root "tweets#index" # ビューを確認する為、仮のルーティングを作成
+  root "tweets#index"
 
   resources :users, only: :show
+  
+  resources :groups, only: [:index, :new, :create, :edit, :update] do
+    resources :messages, only: [:index, :create]
+  end
 
   resources :tweets, only: [:index, :new, :create, :show, :destroy] do
     resources :photos, only: :create
