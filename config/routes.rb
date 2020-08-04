@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     controllers: { registrations: 'registrations' }
   root "tweets#index"
 
-  resources :users, only: :show
+  resources :users, only: [:index, :show]
   
   resources :groups, only: [:index, :new, :create, :edit, :update] do
     resources :messages, only: [:index, :create]
