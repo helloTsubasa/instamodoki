@@ -30,6 +30,16 @@ class GroupsController < ApplicationController
     end
   end
 
+  def destroy
+    @group = Group.find(params[:id])
+    if @group.destroy
+      flash[:notice] = "グループが削除されました"
+    else
+      flash[:alert] = "グループの削除に失敗しました"
+    end
+    redirect_to groups_path
+  end
+
   private
   def group_params
     params.require(:group).permit(:name, user_ids: [])
