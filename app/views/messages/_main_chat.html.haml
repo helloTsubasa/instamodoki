@@ -8,12 +8,17 @@
         - @group.users.each do |user|
           %li.Left-box__member-list__member
             = user.name
-    = link_to edit_group_path(@group.id), class: 'Edit-btn' do
-      Edit
+    .Right-box
+      = link_to edit_group_path(@group.id), class: "Right-box__edit" do
+        %i.fas.fa-user-edit.fa-lg.Right-box__icon
+      = link_to group_path(@group.id), method: :delete, class: "Right-box__delete" do
+        %i.far.fa-trash-alt.fa-lg.Right-box__icon
+
   /---------------------------------------------------------------------------------------------
   .Chat-main__message-list
     = render @messages
   /---------------------------------------------------------------------------------------------
+
   .Chat-main__message-form
     =form_with model: [@group, @message], html: {class: "New-message"}, local: true do |f|
       .New-message__input

@@ -1,11 +1,13 @@
 .Side-bar{
   width: 300px;
-  color: #ffffff;
+  color: black;
+  padding-bottom: 20px;
   &__user-name{
-    background-color: #253141;
-    height: 100px;
+    background-color: #ffffff;
+    height: 80px;
     display: flex;
     align-items: center;
+    border: 1px solid lightgray;
     .Top-list{
       height: 20px;
       width: 260px;
@@ -23,7 +25,7 @@
         list-style: none;
         .btn-icon{
           text-decoration: none;
-          color: #ffffff;
+          color: black;
         }
         &__edit-icon{
           margin-right: 5px;
@@ -32,19 +34,26 @@
     }
   }
   &__group-list{
-    background-color: #2f3e51;
-    height: calc(100vh - 60px - 100px);
+    background-color: #ffffff;
+    height: calc(100vh - 60px - 100px - 40px);
     overflow: scroll;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     .Group{
+      &:hover{
+        background-color: #f0f0f0fa;
+      }
       .group-box{
-        color: #ffffff;
         text-decoration: none;
       }
       &__name{
+        color: black;
         font-size: 15px;
         padding: 20px 20px 5px;
       }
       &__message{
+        color: gray;
         font-size: 11px;
         padding: 0px 20px 40px;
       }

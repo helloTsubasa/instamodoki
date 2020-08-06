@@ -6,7 +6,8 @@
       %ul.Top-list__icons
         %li.Top-list__icons__edit-icon
           = link_to new_group_path do
-            = icon('fas', 'edit', class: 'btn-icon')
+            %i.far.fa-edit.fa-2x.btn-icon
+
   
   .Side-bar__group-list
     - current_user.groups.each do|group|

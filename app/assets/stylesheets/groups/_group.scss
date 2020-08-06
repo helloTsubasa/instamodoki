@@ -93,3 +93,11 @@ li {
     color: #f05050;
   }
 }
+
+.ChatMain{
+  width: 60%;
+  height: calc(100vh - 60px - 60px);
+  border-top: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
