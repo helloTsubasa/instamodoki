@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     @tweets = Tweet.where(user_id: @user.id).order('created_at DESC')
   end
 
+  def search
+    @users = User.search(params[:keyword])
+  end
+
   private
 
     def set_user
