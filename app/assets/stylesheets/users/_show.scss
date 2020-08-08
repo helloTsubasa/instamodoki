@@ -22,20 +22,16 @@
       padding-top: 10px;
       &__row{
         display: flex;
+        align-items: center;
         .profile-name{
           padding-right: 20px;
           font-size: 28px;
-        }
-        .edit-btn{
-          margin: 5px;
-          background-color: white;
-          border-radius: 4px;
-          border: 1px solid lightgray;
         }
         .setting-icon{
           display: flex;
           justify-content: center;
           align-items: center;
+          margin-left: 10px;
           padding-left: 10px;
           padding-top: 1px;
           .fas.fa-cog{
@@ -64,10 +60,25 @@
   text-decoration: none;
   font-weight: bold;
   color: black;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  .edit-btn{
+    padding: 5px;
+    cursor: pointer;
+    height: 100%;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+  }
+  &:hover{
+    .edit-btn{
+      color: #0095f6;
+    }
+  }
 }
-.edit-profile:hover{
-  color: #0095f6;
-}
+
 
 .setting-info{
   display: none;
@@ -83,12 +94,10 @@
         display: block;
         line-height: 35px;
         background-color: white;
-        border-top: 1px solid lightgray;
-        border-bottom: 1px solid lightgray;
-        border-left: 1px solid lightgray;
-        border-right: 1px solid lightgray;
+        border: 1px solid lightgray;
         text-decoration: none;
         color: black;
+        padding: 0 5px;
         &:hover{
           color: #0095f6;
         }
