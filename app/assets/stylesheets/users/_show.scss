@@ -43,6 +43,13 @@
           }
         }
       }
+      &__post{
+        font-weight: bold;
+        margin: 20px 0;
+        span{
+          font-weight: normal;
+        }
+      }
     }
   }
 }

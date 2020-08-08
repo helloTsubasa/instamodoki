@@ -1,7 +1,5 @@
 = render "layouts/header"
 
-= @tweets_count
-
 .profile-wrap
   .profile-main
     .profile-main__row
@@ -18,6 +16,11 @@
               %ul.setting-info
                 %li.setting-info__list
                   = link_to "サインアウト", destroy_user_session_path, method: :delete
+        .profile-menu__post
+          %span 投稿
+          = @tweets_count
+          %span 件
+
     .Photos.grid
       - @tweets.each do |tweet|
         = link_to tweet_path(tweet) do
