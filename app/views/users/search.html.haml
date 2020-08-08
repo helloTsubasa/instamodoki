@@ -4,11 +4,13 @@
   .Contents
     - @users.each do |user|
       .Contents__content
-        .Profile-img
-          = image_tag avatar_url(user), class: "search-img"
+        = link_to user_path(user),class: "non-decorate" do
+          .Profile-img
+            = image_tag avatar_url(user), class: "search-img"
         .Profile-info
-          .Profile-info__name
-            = user.name
+          = link_to user_path(user),class: "non-decorate" do
+            .Profile-info__name
+              = user.name
           .Profile-info__post
             投稿
             = Tweet.where(user_id: user.id).count

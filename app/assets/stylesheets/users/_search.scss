@@ -6,6 +6,10 @@
   .Contents{
     width: 100%;
     max-width: 600px;
+    .non-decorate{
+      text-decoration: none;
+      color: black;
+    }
     &__content{
       display: flex;
       align-items: center;
