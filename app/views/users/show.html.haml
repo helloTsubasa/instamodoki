@@ -9,7 +9,7 @@
         .profile-menu__row
           %h1.profile-name= @user.name
           - if @user == current_user
-            = link_to edit_user_registration_path, class: "edit-profile" do
+            = link_to edit_user_path(current_user), class: "edit-profile" do
               %button.edit-btn{type: "button"}
                 プロフィールを編集
             .setting-icon

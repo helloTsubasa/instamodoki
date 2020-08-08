@@ -1,0 +1,50 @@
+.AccountEdit{
+  background-color: #fafafa;
+  height: calc(100vh - 60px);
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  .AccountEdit-side{
+    background-color: white;
+    width: 30%;
+    max-width: 236px;
+    border: 1px solid lightgray;
+    &__box{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+    .Now{
+      font-weight: bold;
+      border-left: 2px solid black;
+    }
+  }
+  .AccountEdit-main{
+    width: 70%;
+    max-width: 696px;
+    background-color: white;
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    .Main-box{
+      display: flex;
+    }
+    &__left{
+      width: 30%;
+      .Box{
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        &__img{
+          height: auto;
+        }
+      }
+    }
+    &__right{
+      width: 70%;
+      .FormField{
+      }
+    }
+  }
+}

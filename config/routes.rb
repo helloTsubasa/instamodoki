@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     controllers: { registrations: 'registrations' }
   root "tweets#index"
 
-  resources :users, only: [:index, :show] do
+  resources :users, only: [:index, :show, :edit, :update] do
     collection do
       get 'search'
     end
