@@ -1,27 +1,5 @@
 .post
-  %header.header
-    .header__box
-      .title
-        = link_to image_tag('title-logo.png', width: '120', alt: "Instagram"), "/", class: "title-img"
-        -# - if user_signed_in?
-
-      .search
-        🔎検索
-
-      .menu
-        %ul.menu__icons
-          %li.home-icon
-            = link_to "/#" do
-              %i.fas.fa-globe-americas.fa-lg.btn-icon
-          %li.chat-icon
-            = link_to "/#" do
-              %i.fab.fa-rocketchat.fa-lg.btn-icon
-          %li.profile-icon
-            %i.fas.fa-user-astronaut.fa-lg.btn-icon
-            %ul.user-info
-              %li.user-info__list
-                = link_to "▶︎マイページ", user_path(current_user)
-                = link_to "▶︎サインアウト", destroy_user_session_path, method: :delete
+  = render "layouts/header"
 
   .post__box
     .post-box
