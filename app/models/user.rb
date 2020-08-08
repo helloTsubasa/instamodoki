@@ -3,10 +3,10 @@ class User < ApplicationRecord
   has_many :tweets, dependent: :destroy
   has_many :likes
   has_many :dislikes
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many :group_users
   has_many :groups, through: :group_users
-  has_many :messages
+  has_many :messages, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -14,6 +14,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, length: { minimum: 8 }
   
   def update_without_current_password(params, *options)
     params.delete(:current_password)
