@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def show
     @tweets = Tweet.where(user_id: @user.id).order('created_at DESC')
+    @tweets_count = Tweet.where(user_id: @user.id).count
   end
 
   def search

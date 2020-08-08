@@ -1,0 +1,29 @@
+.Wrapper-search{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  .Contents{
+    width: 100%;
+    max-width: 600px;
+    &__content{
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      .Profile-img{
+        .search-img{
+          border-radius:50%;
+          max-width: 60px;
+          width: 100%;
+        }
+      }
+      .Profile-info{
+        margin-left: 20px;
+        &__name{
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
