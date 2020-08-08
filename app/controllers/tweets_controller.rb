@@ -1,6 +1,9 @@
 class TweetsController < ApplicationController
 
   before_action :authenticate_user!
+  before_action :set_tweet, only: [:show, :destroy]
+  before_action :set_user, only: [:index, :show]
+
   
   def index
     @tweets = Tweet.all.includes(:photos, :user).order('created_at DESC')
@@ -24,11 +27,9 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @tweet = Tweet.find_by(id: params[:id])
   end
 
   def destroy
-    @tweet = Tweet.find_by(id: params[:id])
     if @tweet.user == current_user
       flash[:notice] = "投稿が削除されました" if @tweet.destroy
     else
@@ -40,6 +41,14 @@ class TweetsController < ApplicationController
   private
     def tweet_params
       params.require(:tweet).permit(:text, photos_attributes: [:image]).merge(user_id: current_user.id)
+    end
+
+    def set_tweet
+      @tweet = Tweet.find_by(id: params[:id])
+    end
+
+    def set_user
+      @user = User.find_by(id: params[:id])
     end
 
 end

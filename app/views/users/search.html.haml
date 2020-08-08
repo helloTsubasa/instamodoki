@@ -1,0 +1,15 @@
+= render "layouts/header"
+
+.Wrapper-search
+  .Contents
+    - @users.each do |user|
+      .Contents__content
+        .Profile-img
+          = image_tag avatar_url(user), class: "search-img"
+        .Profile-info
+          .Profile-info__name
+            = user.name
+          .Profile-info__post
+            投稿
+            = Tweet.where(user_id: user.id).count
+            件

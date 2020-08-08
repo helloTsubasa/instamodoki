@@ -2,10 +2,11 @@
   .header__box
     .title
       = link_to image_tag('title-logo.png', width: '120', alt: "Instagram"), "/", class: "title-img"
-      -# - if user_signed_in?
 
-    .search
-      🔎検索（仮）
+
+    =form_with url: search_users_path, local: true, method: :get, class: "search" do |f|
+      =f.text_field :keyword, placeholder: " 🔍 ユーザー検索..", class: "search-form"
+
 
     .menu
       .post-icon
