@@ -11,13 +11,21 @@
     border: 1px solid lightgray;
     &__box{
       width: 100%;
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
+      padding: 15px 15px;
     }
     .Now{
       font-weight: bold;
       border-left: 2px solid black;
+    }
+    .Other{
+      &:hover{
+        background-color: #fafafa;
+        border-left: 1px solid gray;
+      }
+    }
+    a{
+      text-decoration: none;
+      color: black;
     }
   }
   .AccountEdit-main{
@@ -27,23 +35,51 @@
     border-top: 1px solid lightgray;
     border-right: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
+    padding: 20px 0;
     .Main-box{
+      width: 100%;
       display: flex;
-    }
-    &__left{
-      width: 30%;
-      .Box{
-        display: flex;
-        justify-content: center;
-        padding: 15px 0;
-        &__img{
-          height: auto;
+      padding: 15px 0;
+      &__left{
+        font-weight: bold;;
+        width: 25%;
+        .FormField-left{
+          padding: 5px 0;
+          display: flex;
+          justify-content: flex-end;
         }
       }
-    }
-    &__right{
-      width: 70%;
-      .FormField{
+      &__right{
+        width: 70%;
+        margin-left: 30px;
+      }
+      input[type="text"]{
+        width: 70%;
+        border: 1px solid lightgray;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      input[type="email"]{
+        width: 70%;
+        border: 1px solid lightgray;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      input[type="password"]{
+        width: 70%;
+        border: 1px solid lightgray;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      .SubmitButton{
+        background-color: #0095f6;
+        color: white;
+        border-radius: 5px;
+        border: 1px solid #0095f6;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 3px 10px;
       }
     }
   }
