@@ -1,21 +1,50 @@
 <h1>InstaModoki(Insta風写真投稿アプリ)</h1>
 
+## DEMO
+![DEMO](https://user-images.githubusercontent.com/66294265/89740069-cdd3b080-dac0-11ea-8ce9-9975f57a629d.gif)
+
 ## アプリケーションの概要
 Instagram風写真投稿アプリです。  
 個人制作物としては、本アプリが処女作になります。  
-herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/  
+
+## 本番環境
+<ul>
+  <li>URL : https://instamodoki.herokuapp.com/</li>
+  <li>テスト用アカウント等</li>
+  <ul>
+    <li>購入者用</li>
+    <ul>
+      <li>メールアドレス : buyer_user@gmail.com</li>
+      <li>パスワード : 1234567</li>
+    </ul>
+    <li>購入用カード情報</li>
+    <ul>
+      <li>番号： 4242424242424242</li>
+      <li>期限： 2 / 22</li>
+      <li>セキュリティコード：123</li>
+    </ul>
+    <li>出品者用</li>
+    <ul>
+      <li>メールアドレス名: seller_user@gmail.com</li>
+      <li>パスワード: 1234567</li>
+    </ul>
+  </ul>
+</ul>
 
 
 ## アプリケーションの機能
 <ul>
   <li>ユーザーの新規登録/ログイン</li>
   <li>ユーザーマイページの表示</li>
+  <li>ユーザーの検索</li>
+  <li>ユーザー情報の編集・削除</li>
   <li>ツイートの一覧表示</li>
-  <li>ツイートの投稿</li>
-  <li>ツイートの削除</li>
+  <li>ツイートの投稿・削除</li>
   <li>ツイートの詳細表示</li>
   <li>ツイートへのいいね・わるいね(非同期)</li>
   <li>ツイートへのコメント(非同期)</li>
+  <li>ユーザー間のチャット(非同期)</li>
+  <li>チャットグループの作成・編集・削除</li>
 </ul>
 
 ## 開発環境
@@ -43,7 +72,7 @@ herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/
 
 
 # DB設計
-![データベース ER 図](https://user-images.githubusercontent.com/66294265/89131296-9ad07080-d546-11ea-82dc-f645877cc797.png)
+![データベース ER 図](https://user-images.githubusercontent.com/66294265/89739468-dfff2000-dabb-11ea-82ca-183a5fef488e.png)
 
 
 ## usersテーブル
@@ -59,6 +88,9 @@ herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/
 - has_many :tweets
 - has_many :likes
 - has_many :dislikes
+- has_many :messages
+- has_many :group_users
+- has_many :groups, through :group_users
 
 
 ## tweetsテーブル
@@ -125,3 +157,42 @@ herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/
 ### Association
 - belongs_to :user
 - belongs_to :tweet
+
+
+
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :messages
+- has_many :group_users
+- has_many :users, through :group_users
+
+
+## group_usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|content|text||
+|image|string||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
