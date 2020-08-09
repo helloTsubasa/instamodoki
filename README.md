@@ -10,24 +10,11 @@ Instagram風写真投稿アプリです。
 ## 本番環境
 <ul>
   <li>URL : https://instamodoki.herokuapp.com/</li>
-  <li>テスト用アカウント等</li>
+  <li>テスト用アカウント</li>
   <ul>
-    <li>購入者用</li>
-    <ul>
-      <li>メールアドレス : buyer_user@gmail.com</li>
-      <li>パスワード : 1234567</li>
-    </ul>
-    <li>購入用カード情報</li>
-    <ul>
-      <li>番号： 4242424242424242</li>
-      <li>期限： 2 / 22</li>
-      <li>セキュリティコード：123</li>
-    </ul>
-    <li>出品者用</li>
-    <ul>
-      <li>メールアドレス名: seller_user@gmail.com</li>
-      <li>パスワード: 1234567</li>
-    </ul>
+    <li>ユーザー名：test_user</li>
+    <li>メールアドレス：test@test.com</li>
+    <li>パスワード：12345678</li>
   </ul>
 </ul>
 
