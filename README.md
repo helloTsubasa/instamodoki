@@ -1,9 +1,35 @@
 <h1>InstaModoki(Insta風写真投稿アプリ)</h1>
 
+## DEMO
+![DEMO](https://user-images.githubusercontent.com/66294265/89740069-cdd3b080-dac0-11ea-8ce9-9975f57a629d.gif)
+
 ## アプリケーションの概要
 Instagram風写真投稿アプリです。  
 個人制作物としては、本アプリが処女作になります。  
-herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/  
+
+## 本番環境
+<ul>
+  <li>URL : https://instamodoki.herokuapp.com/</li>
+  <li>テスト用アカウント等</li>
+  <ul>
+    <li>購入者用</li>
+    <ul>
+      <li>メールアドレス : buyer_user@gmail.com</li>
+      <li>パスワード : 1234567</li>
+    </ul>
+    <li>購入用カード情報</li>
+    <ul>
+      <li>番号： 4242424242424242</li>
+      <li>期限： 2 / 22</li>
+      <li>セキュリティコード：123</li>
+    </ul>
+    <li>出品者用</li>
+    <ul>
+      <li>メールアドレス名: seller_user@gmail.com</li>
+      <li>パスワード: 1234567</li>
+    </ul>
+  </ul>
+</ul>
 
 ## アプリケーションの機能
 <ul>
