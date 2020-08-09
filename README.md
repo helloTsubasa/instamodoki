@@ -45,7 +45,7 @@ herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/
 
 
 # DB設計
-![データベース ER 図](https://user-images.githubusercontent.com/66294265/89131296-9ad07080-d546-11ea-82dc-f645877cc797.png)
+![データベース ER 図](https://user-images.githubusercontent.com/66294265/89739468-dfff2000-dabb-11ea-82ca-183a5fef488e.png)
 
 
 ## usersテーブル
