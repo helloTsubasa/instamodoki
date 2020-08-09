@@ -81,6 +81,18 @@
         font-weight: bold;
         padding: 3px 10px;
       }
+      .UserDelete{
+        background-color: white;
+        border: none;
+        font-weight: bold;
+        color: #0095f6;
+        cursor: pointer;
+      }
+      .addClass{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 }
