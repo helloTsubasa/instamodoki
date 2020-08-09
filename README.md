@@ -57,7 +57,7 @@ Instagram風写真投稿アプリです。
   <li>画像の複数枚投稿・表示</li>
 </ul>
 
-
+<br></br>
 # DB設計
 ![データベース ER 図](https://user-images.githubusercontent.com/66294265/89739468-dfff2000-dabb-11ea-82ca-183a5fef488e.png)
 
