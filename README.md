@@ -9,6 +9,8 @@ herokuを使ってデプロイ済 --> https://instamodoki.herokuapp.com/
 <ul>
   <li>ユーザーの新規登録/ログイン</li>
   <li>ユーザーマイページの表示</li>
+  <li>ユーザーの検索</li>
+  <li>ユーザー情報の編集・削除</li>
   <li>ツイートの一覧表示</li>
   <li>ツイートの投稿・削除</li>
   <li>ツイートの詳細表示</li>
